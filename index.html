@@ -1,71 +1,102 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style id="webmakerstyle">
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: #30333A;
-        }
-        
-        .wrapper {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        ul li {
-            width: 50px;
-            height: 50px;
-            position: relative;
-            background: black;
-            margin: 5px 0;
-            cursor: pointer;
-            border-radius: 3px;
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-        }
-        
-        ul li .fa {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: #fff;
-        }
-        
-        ul li.facebook {
-            background: #1877F2;
-        }
-        
-        ul li.twitter {
-            background: #1DA1F2;
-        }
-        
-        ul li.instagram {
-            background: #4F7BA4;
-        }
-        
-        ul li.google {
-            background: #D95032;
-        }
-        
-        ul li.whatsapp {
-            background: #00E676;
-        }
-        /* ul li.facebook div.slider {
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <head>
+        <meta charset="UTF-8" />
+
+        <style id="webmakerstyle">
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                background: #30333A;
+            }
+            
+            .wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            ul {
+                list-style: none;
+            }
+            
+            ul li {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                background: black;
+                margin: 5px 0;
+                cursor: pointer;
+                border-radius: 3px;
+                /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+            }
+            
+            ul li .fa {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                color: #fff;
+            }
+            
+            @media (min-width: 360px) and (max-width: 576px) {
+                ul li {
+                    width: 70px;
+                    height: 70px;
+                    position: relative;
+                    background: black;
+                    margin: 5px 0;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+                }
+                ul li .fa {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }
+            
+            ul li.facebook {
+                background: #1877F2;
+            }
+            
+            ul li.twitter {
+                background: #1DA1F2;
+            }
+            
+            ul li.instagram {
+                background: #4F7BA4;
+            }
+            
+            ul li.google {
+                background: #D95032;
+            }
+            
+            ul li.whatsapp {
+                background: #00E676;
+            }
+            /* ul li.facebook div.slider {
             background: #627aac;
         }
         
@@ -84,114 +115,124 @@
         ul li.whatsapp div.slider {
             background: #82d47e;
         } */
-        
-        .slider {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 10px;
-            width: 0px;
-            height: 50px;
-            /* background: #eebb5c; */
-            /* background: #666; */
-            border-radius: 3px;
-            transition: all 0.5s 0.3s ease;
-            z-index: -1;
-        }
-        
-        .slider p {
-            font-family: arial;
-            /* text-transform: uppercase; */
-            font-size: 16px;
-            /* font-weight: 900; */
-            color: #fff;
-            text-align: center;
-            line-height: 50px;
-            opacity: 0;
-            transition: all 0.6s ease;
-        }
-        
-        ul li:hover .slider {
-            width: 180px;
-            transition: all 0.5s ease;
-        }
-        
-        ul li:hover .slider p {
-            opacity: 1;
-            transition: all 1s 0.2s ease;
-        }
-        /* youtube link */
-        
-        .youtube {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            width: 50px;
-            text-align: center;
-            padding: 10px 10px;
-            background: red;
-            border-radius: 5px;
-        }
-        
-        .youtube a {
-            text-decoration: none;
-            color: #fff;
-        }
-    </style>
-</head>
+            
+            .slider {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 10px;
+                width: 0px;
+                height: 50px;
+                /* background: #eebb5c; */
+                /* background: #666; */
+                border-radius: 3px;
+                transition: all 0.5s 0.3s ease;
+                z-index: -1;
+            }
+            
+            .slider p {
+                font-family: arial;
+                /* text-transform: uppercase; */
+                font-size: 16px;
+                /* font-weight: 900; */
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+                opacity: 0;
+                transition: all 0.6s ease;
+            }
+            
+            ul li:hover .slider {
+                width: 180px;
+                transition: all 0.5s ease;
+            }
+            
+            ul li:hover .slider p {
+                opacity: 1;
+                transition: all 1s 0.2s ease;
+            }
+            /* youtube link */
+            
+            .youtube {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                width: 50px;
+                text-align: center;
+                padding: 10px 10px;
+                background: red;
+                border-radius: 5px;
+            }
+            
+            .youtube a {
+                text-decoration: none;
+                color: #fff;
+            }
+        </style>
+    </head>
 
-<body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="wrapper">
-        <ul>
-            <li class="facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <div class="slider">
-                    <p>facebook</p>
-                </div>
-            </li>
+        <div class="wrapper">
+            <ul>
+                <li class="facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <div class="slider">
+                        <p>facebook</p>
+                    </div>
+                </li>
 
-            <li class="twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <div class="slider">
-                    <p>twitter</p>
-                </div>
-            </li>
+                <li class="twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <div class="slider">
+                        <p>twitter</p>
+                    </div>
+                </li>
 
-            <li class="instagram">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <div class="slider">
-                    <p>instagram</p>
-                </div>
-            </li>
+                <li class="instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <div class="slider">
+                        <p>instagram</p>
+                    </div>
+                </li>
 
-            <li class="google">
-                <i class="fa fa-google" aria-hidden="true"></i>
-                <div class="slider">
-                    <p>google</p>
-                </div>
-            </li>
+                <li class="google">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <div class="slider">
+                        <p>google</p>
+                    </div>
+                </li>
 
-            <li class="whatsapp">
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                <div class="slider">
-                    <p>whatsapp</p>
-                </div>
-            </li>
-        </ul>
-    </div>
+                <li class="whatsapp">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <div class="slider">
+                        <p>whatsapp</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
 
-    <!-- profil -->
-    <div class="youtube">
-        <a href="https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg" target="_blank">by ony</a>
-    </div>
+        <!-- profil -->
+        <div class="youtube">
+            <a href="https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg" target="_blank">by ony</a>
+        </div>
 
-    <script>
-        /* Jangan ragu untuk mengunjungi saluran youtube saya untuk pembaruan lebih lanjut, https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg */
-        //# sourceURL=userscript.js
-    </script>
-</body>
+        <script>
+            /* Jangan ragu untuk mengunjungi saluran youtube saya untuk pembaruan lebih lanjut, https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg */
+            //# sourceURL=userscript.js
+        </script>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper.js -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper.js and Bootstrap JS
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>
+    -->
+    </body>
 
 </html>
