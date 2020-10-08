@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <title>Hello, world!</title>
 
@@ -47,7 +48,7 @@
                 /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
             }
             
-            ul li .fa {
+            ul li .fab {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -140,7 +141,7 @@
                 width: 50px;
                 text-align: center;
                 padding: 10px 10px;
-                background: red;
+                /* background: red; */
                 border-radius: 5px;
             }
             
@@ -166,12 +167,12 @@
                     border-radius: 50%;
                     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
                 }
-                ul li .fa {
+                ul li .fab {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 40px;
+                    font-size: 33px;
                     color: #fff;
                 }
                 .slider {
@@ -210,17 +211,23 @@
                 .youtube {
                     position: fixed;
                     bottom: 10px;
-                    right: 31px;
+                    /* right: 31px; */
                     bottom: 50px;
-                    width: 50px;
-                    text-align: center;
-                    padding: 10px 10px;
-                    background: red;
-                    border-radius: 5px;
+                    left: 10px;
+                    width: 90px;
+                    /* text-align: center; */
+                    /* padding: 10px 10px; */
+                    /* background: red; */
+                    /* border-radius: 5px; */
                 }
                 .youtube a {
                     text-decoration: none;
                     color: #fff;
+                }
+                .youtube .fab {
+                    font-size: 30px;
+                    color: red;
+                    vertical-align: sub;
                 }
             }
         </style>
@@ -232,35 +239,35 @@
         <div class="wrapper">
             <ul>
                 <li class="facebook">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                     <div class="slider">
                         <p>Facebook</p>
                     </div>
                 </li>
 
                 <li class="twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                     <div class="slider">
                         <p>Twitter</p>
                     </div>
                 </li>
 
                 <li class="instagram">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
                     <div class="slider">
                         <p>Instagram</p>
                     </div>
                 </li>
 
                 <li class="google">
-                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <i class="fab fa-google" aria-hidden="true"></i>
                     <div class="slider">
                         <p>Google</p>
                     </div>
                 </li>
 
                 <li class="whatsapp">
-                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     <div class="slider">
                         <p>Whatsapp</p>
                     </div>
@@ -271,7 +278,8 @@
 
         <!-- profil -->
         <div class="youtube">
-            <a href="https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg" target="_blank">by ony</a>
+            <i class="fab fa-youtube"></i>
+            <a href="https://www.youtube.com/channel/UC5Dkclx4QbWodbuLD9HAzsg" target="_blank"> Ony</a>
         </div>
 
         <script>
@@ -283,6 +291,8 @@
 
         <!-- Option 1: Bootstrap Bundle with Popper.js -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
         <!-- Option 2: Separate Popper.js and Bootstrap JS
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
